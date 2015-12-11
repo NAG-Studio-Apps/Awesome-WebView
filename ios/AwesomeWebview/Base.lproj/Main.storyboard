@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--MainView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="MainView" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ih-hH-ehB"/>
+                        <viewControllerLayoutGuide type="bottom" id="EDb-Sc-Rhq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView clipsSubviews="YES" contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJC-K0-1Yz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dJC-K0-1Yz" firstAttribute="bottom" secondItem="EDb-Sc-Rhq" secondAttribute="top" id="OeP-E7-wc2"/>
+                            <constraint firstAttribute="trailing" secondItem="dJC-K0-1Yz" secondAttribute="trailing" id="TL6-Mc-TcQ"/>
+                            <constraint firstItem="dJC-K0-1Yz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t87-0I-xti"/>
+                            <constraint firstItem="dJC-K0-1Yz" firstAttribute="top" secondItem="7Ih-hH-ehB" secondAttribute="bottom" id="tTU-hp-Vkq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="dJC-K0-1Yz" id="PGn-nM-J9n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="482"/>
+        </scene>
+        <!--ErrorView-->
+        <scene sceneID="qug-YM-i5s">
+            <objects>
+                <viewController storyboardIdentifier="ErrorView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qfk-fM-BBV" userLabel="ErrorView" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MFh-6P-tb3"/>
+                        <viewControllerLayoutGuide type="bottom" id="HbT-FY-rfE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qdf-0P-d7X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Media/radio.png" translatesAutoresizingMaskIntoConstraints="NO" id="T5t-ow-BDd">
+                                <rect key="frame" x="237" y="113" width="126" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="91e-R7-Lkd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="126" id="Dyj-nM-EDa"/>
+                                    <constraint firstAttribute="height" constant="211" id="YAd-Ny-tit"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="211" id="cOc-Zd-l1M"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You seem to be offline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-zC-32T">
+                                <rect key="frame" x="218" y="356" width="165" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="29c-Ii-xnY"/>
+                                    <constraint firstAttribute="width" constant="165" id="DRr-5Z-TQa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="Ulh-qU-6n3"/>
+                                    <constraint firstAttribute="height" constant="21" id="Yh4-mV-t3y"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="bup-YC-nWE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please check your connection and try again" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXP-e4-FnC">
+                                <rect key="frame" x="140" y="385" width="321" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="0fp-NF-rg6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="321" id="9av-MC-xSK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="ndC-Wz-bte"/>
+                                    <constraint firstAttribute="height" constant="21" id="uWX-S5-fTf"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="31" id="zSi-vI-fd4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMX-Vu-zN7">
+                                <rect key="frame" x="252" y="455" width="96" height="44"/>
+                                <color key="backgroundColor" red="0.97780994744163141" green="0.97646244234210744" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kwd-6R-lfq"/>
+                                    <constraint firstAttribute="width" constant="96" id="nsD-Sy-Tab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleButtonClick:" destination="Qfk-fM-BBV" eventType="touchDown" id="Pf7-HG-dvG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="T5t-ow-BDd" secondAttribute="centerY" constant="81.5" id="5Ql-ey-yBk"/>
+                            <constraint firstAttribute="centerX" secondItem="aXP-e4-FnC" secondAttribute="centerX" constant="-0.5" id="7gO-Jb-bj0"/>
+                            <constraint firstAttribute="centerY" secondItem="FPK-zC-32T" secondAttribute="centerY" constant="-66.5" id="8Jc-Xo-iX8"/>
+                            <constraint firstAttribute="centerY" secondItem="tMX-Vu-zN7" secondAttribute="centerY" constant="-177" id="TVd-8o-PBu"/>
+                            <constraint firstAttribute="centerY" secondItem="aXP-e4-FnC" secondAttribute="centerY" constant="-100.5" id="UBL-A3-TCP"/>
+                            <constraint firstAttribute="centerX" secondItem="tMX-Vu-zN7" secondAttribute="centerX" id="cjA-sJ-BaI"/>
+                            <constraint firstAttribute="centerX" secondItem="FPK-zC-32T" secondAttribute="centerX" constant="-0.5" id="gVK-xB-IpJ"/>
+                            <constraint firstAttribute="centerX" secondItem="T5t-ow-BDd" secondAttribute="centerX" id="wJo-od-RRe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="retryButton" destination="tMX-Vu-zN7" id="HSa-4l-VHv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoL-Mz-yW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="482"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Media/radio.png" width="1112" height="1779"/>
+    </resources>
+</document>

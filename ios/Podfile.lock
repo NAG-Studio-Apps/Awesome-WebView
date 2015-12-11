@@ -1,0 +1,13 @@
+PODS:
+  - MBProgressHUD (0.9.1)
+  - SSPullToRefresh (1.2.4)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.1)
+  - SSPullToRefresh
+
+SPEC CHECKSUMS:
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SSPullToRefresh: 369e862c1d6528c7a354fc85cd4763d4e670e9af
+
+COCOAPODS: 0.37.2
