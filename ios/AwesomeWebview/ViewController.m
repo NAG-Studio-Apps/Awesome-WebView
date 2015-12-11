@@ -1,48 +1,11 @@
-//
-//  ViewController.m
-//  AwesomeWebview
-//
-//  Created by Lukas on 10/06/15.
-//  Copyright (c) 2015 ciwix. All rights reserved.
-//
 #import <Foundation/NSURLError.h>
+#import <MBProgressHUD.h>
+#import <powerdefines/powerdefines.h>
 
+#import "Globals.h"
 #import "ViewController.h"
 #import "Connectivity.h"
 #import "Cookies.h"
-
-#import <MBProgressHUD.h>
-
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Set your custom values here
-
-///WebView Settings
-//The URI our WebView will show
-NSString *view_uri = @"http://google.com";
-
-//Show the "Bounce" effect when scrolling?
-BOOL WEBVIEW_BOUNCE_ACTIVE = YES;
-
-//Show the 'Loading'-Spinner
-BOOL SPINNER_VISIBLE = YES;
-
-///Translations
-//The text under the 'Loading'-Spinner
-NSString *SPINNER_LOADING_TEXT = @"Loading...";
-
-///Console Settings
-//Show debug messages from Connectivity.m ?
-BOOL SHOW_CONNECTIVITY_DEBUG_MSG = NO;
-
-//Show debug messages from WebView ?
-BOOL SHOW_WEBVIEW_DEBUG_MSG = NO;
-
-
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
 
 @interface ViewController ()
 
@@ -63,12 +26,12 @@ BOOL SHOW_WEBVIEW_DEBUG_MSG = NO;
     //View loaded, let's check the internet connection
     NSMutableString *msg = [NSMutableString string];
     [msg appendString:@"[MAIN] Loading '"];
-    [msg appendString:view_uri];
+    [msg appendString:VIEW_URI];
     [msg appendString:@"' in [_webView]"];
-    NSLog(msg);
+    NSLog(@"%@", msg);
     
     //Load global uri in webview
-    [self loadRequestedFromString:view_uri];
+    [self loadRequestedFromString:VIEW_URI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,7 +70,7 @@ BOOL SHOW_WEBVIEW_DEBUG_MSG = NO;
         [msg appendString:@"[_webView] ~didFinishLoad | "];
         [msg appendString:@"New URL -> "];
         [msg appendString:_webView.request.URL.absoluteString];
-        NSLog(msg);
+        NSLog(@"%@", msg);
     }
 }
 
@@ -118,7 +81,7 @@ BOOL SHOW_WEBVIEW_DEBUG_MSG = NO;
     
     NSString *err = [error localizedDescription];
     NSLog(@"[_webView] Reported this error:");
-    NSLog(err);
+    NSLog(@"%@", err);
     
     [self showNoInetScreen];
     

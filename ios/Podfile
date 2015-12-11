@@ -9,5 +9,5 @@ target 'AwesomeWebviewTests' do
 
 end
 
+pod 'powerdefines'
 pod 'MBProgressHUD', '~> 0.9.1'
-pod 'SSPullToRefresh'

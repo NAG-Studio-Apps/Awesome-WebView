@@ -1,18 +1,9 @@
-//
-//  Connectivity.m
-//  AwesomeWebview
-//
-//  Created by Lukas on 10/06/15.
-//  Copyright (c) 2015 ciwix. All rights reserved.
-//
-
+#import "Globals.h"
 #import "Connectivity.h"
 
 #import <sys/socket.h>
 #import <netinet/in.h>
 #import <SystemConfiguration/SystemConfiguration.h>
-
-extern BOOL SHOW_CONNECTIVITY_DEBUG_MSG;
 
 @implementation Connectivity
 
