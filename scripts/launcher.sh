@@ -59,11 +59,20 @@ function download() {
     wget --quiet --show-progress $URL
 }
 
-options=$@
-arguments=($options)
-index=0
+function prepareIos() {
+    filteredName=$(echo $NAME | sed 's/ /_/g')
+    
+    cout "Preparing the iOS project..."
+}
 
-for argument in $options; do
+function prepareAndroid() {
+    true
+    cout "Preparing the Android project..."
+}
+
+arguments=($@)
+index=0
+for argument in "${arguments[@]}"; do
     index=`expr $index + 1`
 
     case $argument in
@@ -107,10 +116,12 @@ if [[ $DOWNLOAD_ONLY == false ]]; then
     cout "Preparing desired platforms..."
     if [[ $W_ANDROID == true ]]; then
         mv "Awesome-WebView-$BRANCH/android" .
+        prepareAndroid
     fi
 
     if [[ $W_IOS == true ]]; then
         mv "Awesome-WebView-$BRANCH/ios" .
+        prepareIos
     fi
 
     cout "Cleaning up..."

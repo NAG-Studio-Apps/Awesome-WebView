@@ -1,11 +1,10 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+platform :ios, '8.4'
 
-target 'AwesomeWebview' do
+target 'Awesome-WebView' do
 
 end
 
-target 'AwesomeWebviewTests' do
+target 'Awesome-WebViewTests' do
 
 end
 
