@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520B6D3A87001F58B8E5A64D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77265FABA31D52A4AEA86146 /* libPods.a */; };
 		D00151FA1B282734002B5AAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00151F91B282734002B5AAF /* main.m */; };
 		D00151FD1B282734002B5AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D00151FC1B282734002B5AAF /* AppDelegate.m */; };
 		D00152001B282734002B5AAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00151FF1B282734002B5AAF /* ViewController.m */; };
@@ -31,7 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D00151F41B282734002B5AAF /* Awesome-WebView.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Awesome-WebView.temp_caseinsensitive_rename.app"; path = "/projects/Awesome-WebView/ios/build/Debug-iphoneos/Awesome-WebView.temp_caseinsensitive_rename.app"; sourceTree = "<absolute>"; };
+		052A57329B899DC058E10D13 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		77265FABA31D52A4AEA86146 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00151F81B282734002B5AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00151F91B282734002B5AAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D00151FB1B282734002B5AAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,7 +43,6 @@
 		D00152021B282734002B5AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D00152041B282734002B5AAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D00152071B282734002B5AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D001520D1B282734002B5AAF /* Awesome-WebView.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Awesome-WebView.temp_caseinsensitive_rename.xctest"; path = "/projects/Awesome-WebView/ios/build/Debug-iphoneos/Awesome-WebView.temp_caseinsensitive_rename.xctest"; sourceTree = "<absolute>"; };
 		D00152121B282734002B5AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00152131B282734002B5AAF /* AwesomeWebviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeWebviewTests.m; sourceTree = "<group>"; };
 		D027670A1C1B263A00BFCE8A /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
@@ -49,8 +50,11 @@
 		D05163631B28312800A39579 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D051636B1B28353900A39579 /* Connectivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connectivity.h; sourceTree = "<group>"; };
 		D051636C1B28353900A39579 /* Connectivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connectivity.m; sourceTree = "<group>"; };
+		D068CCA91C1CB79F003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome-WebView.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D068CCAA1C1CB7A5003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Awesome-WebView.temp_caseinsensitive_rename.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08FC77D1B2AC98D0076F423 /* Cookies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cookies.h; sourceTree = "<group>"; };
 		D08FC77E1B2AC98D0076F423 /* Cookies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cookies.m; sourceTree = "<group>"; };
+		DCE502EB86CF83A50F047790 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05163641B28312800A39579 /* SystemConfiguration.framework in Frameworks */,
+				520B6D3A87001F58B8E5A64D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +77,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3277D4CEF0B1351081EAE58F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCE502EB86CF83A50F047790 /* Pods.debug.xcconfig */,
+				052A57329B899DC058E10D13 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA64CC1E09A14198F3AAA384 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77265FABA31D52A4AEA86146 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D00151EB1B282733002B5AAF = {
 			isa = PBXGroup;
 			children = (
 				D00151F61B282734002B5AAF /* Awesome-WebView */,
 				D00152101B282734002B5AAF /* Awesome-WebViewTests */,
 				D05163631B28312800A39579 /* SystemConfiguration.framework */,
+				D068CCA91C1CB79F003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.app */,
+				D068CCAA1C1CB7A5003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */,
+				3277D4CEF0B1351081EAE58F /* Pods */,
+				BA64CC1E09A14198F3AAA384 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,10 +157,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D00151F31B282734002B5AAF /* Awesome-Webview */ = {
+		D00151F31B282734002B5AAF /* Awesome-WebView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D00152171B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-Webview" */;
+			buildConfigurationList = D00152171B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-WebView" */;
 			buildPhases = (
+				8929E4DF4CB5E2387D4D002D /* Check Pods Manifest.lock */,
 				D00151F01B282734002B5AAF /* Sources */,
 				D00151F11B282734002B5AAF /* Frameworks */,
 				D00151F21B282734002B5AAF /* Resources */,
@@ -145,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = "Awesome-Webview";
+			name = "Awesome-WebView";
 			productName = AwesomeWebview;
-			productReference = D00151F41B282734002B5AAF /* Awesome-WebView.temp_caseinsensitive_rename.app */;
+			productReference = D068CCA91C1CB79F003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D001520C1B282734002B5AAF /* Awesome-WebviewTests */ = {
+		D001520C1B282734002B5AAF /* Awesome-WebViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D001521A1B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-WebviewTests" */;
+			buildConfigurationList = D001521A1B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-WebViewTests" */;
 			buildPhases = (
 				D00152091B282734002B5AAF /* Sources */,
 				D001520A1B282734002B5AAF /* Frameworks */,
@@ -163,9 +190,9 @@
 			dependencies = (
 				D001520F1B282734002B5AAF /* PBXTargetDependency */,
 			);
-			name = "Awesome-WebviewTests";
+			name = "Awesome-WebViewTests";
 			productName = AwesomeWebviewTests;
-			productReference = D001520D1B282734002B5AAF /* Awesome-WebView.temp_caseinsensitive_rename.xctest */;
+			productReference = D068CCAA1C1CB7A5003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -199,8 +226,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D00151F31B282734002B5AAF /* Awesome-Webview */,
-				D001520C1B282734002B5AAF /* Awesome-WebviewTests */,
+				D00151F31B282734002B5AAF /* Awesome-WebView */,
+				D001520C1B282734002B5AAF /* Awesome-WebViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +284,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8929E4DF4CB5E2387D4D002D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -285,7 +327,7 @@
 /* Begin PBXTargetDependency section */
 		D001520F1B282734002B5AAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D00151F31B282734002B5AAF /* Awesome-Webview */;
+			target = D00151F31B282734002B5AAF /* Awesome-WebView */;
 			targetProxy = D001520E1B282734002B5AAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -397,6 +439,7 @@
 		};
 		D00152181B282734002B5AAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE502EB86CF83A50F047790 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Awesome-WebView/Supporting Files/Info.plist";
@@ -408,6 +451,7 @@
 		};
 		D00152191B282734002B5AAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 052A57329B899DC058E10D13 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Awesome-WebView/Supporting Files/Info.plist";
@@ -465,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D00152171B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-Webview" */ = {
+		D00152171B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-WebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D00152181B282734002B5AAF /* Debug */,
@@ -474,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D001521A1B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-WebviewTests" */ = {
+		D001521A1B282734002B5AAF /* Build configuration list for PBXNativeTarget "Awesome-WebViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D001521B1B282734002B5AAF /* Debug */,
