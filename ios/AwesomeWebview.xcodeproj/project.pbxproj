@@ -88,12 +88,12 @@
 		D00151EB1B282733002B5AAF = {
 			isa = PBXGroup;
 			children = (
-				D05163631B28312800A39579 /* SystemConfiguration.framework */,
 				D00151F61B282734002B5AAF /* AwesomeWebview */,
 				D00152101B282734002B5AAF /* AwesomeWebviewTests */,
-				D00151F51B282734002B5AAF /* Products */,
-				FAA0A1391A58B7642356314C /* Pods */,
 				82C95DE2C35D94D01BC5B2BD /* Frameworks */,
+				FAA0A1391A58B7642356314C /* Pods */,
+				D00151F51B282734002B5AAF /* Products */,
+				D05163631B28312800A39579 /* SystemConfiguration.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,20 +109,20 @@
 		D00151F61B282734002B5AAF /* AwesomeWebview */ = {
 			isa = PBXGroup;
 			children = (
-				D028E83E1B2863170056DE94 /* Media */,
-				D051636B1B28353900A39579 /* Connectivity.h */,
-				D051636C1B28353900A39579 /* Connectivity.m */,
+				D00151F71B282734002B5AAF /* Supporting Files */,
 				D00151FB1B282734002B5AAF /* AppDelegate.h */,
 				D00151FC1B282734002B5AAF /* AppDelegate.m */,
-				D00151FE1B282734002B5AAF /* ViewController.h */,
-				D00151FF1B282734002B5AAF /* ViewController.m */,
-				D00152011B282734002B5AAF /* Main.storyboard */,
-				D00152041B282734002B5AAF /* Images.xcassets */,
-				D00152061B282734002B5AAF /* LaunchScreen.xib */,
-				D00151F71B282734002B5AAF /* Supporting Files */,
+				D051636B1B28353900A39579 /* Connectivity.h */,
+				D051636C1B28353900A39579 /* Connectivity.m */,
 				D08FC77D1B2AC98D0076F423 /* Cookies.h */,
 				D08FC77E1B2AC98D0076F423 /* Cookies.m */,
 				D027670A1C1B263A00BFCE8A /* Globals.h */,
+				D00152041B282734002B5AAF /* Images.xcassets */,
+				D00152061B282734002B5AAF /* LaunchScreen.xib */,
+				D00152011B282734002B5AAF /* Main.storyboard */,
+				D028E83E1B2863170056DE94 /* Media */,
+				D00151FE1B282734002B5AAF /* ViewController.h */,
+				D00151FF1B282734002B5AAF /* ViewController.m */,
 			);
 			path = AwesomeWebview;
 			sourceTree = "<group>";
@@ -133,14 +133,14 @@
 				D00151F81B282734002B5AAF /* Info.plist */,
 				D00151F91B282734002B5AAF /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D00152101B282734002B5AAF /* AwesomeWebviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				D00152131B282734002B5AAF /* AwesomeWebviewTests.m */,
 				D00152111B282734002B5AAF /* Supporting Files */,
+				D00152131B282734002B5AAF /* AwesomeWebviewTests.m */,
 			);
 			path = AwesomeWebviewTests;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			children = (
 				D00152121B282734002B5AAF /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FAA0A1391A58B7642356314C /* Pods */ = {
@@ -347,6 +347,7 @@
 				D00152021B282734002B5AAF /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		D00152061B282734002B5AAF /* LaunchScreen.xib */ = {
@@ -355,6 +356,7 @@
 				D00152071B282734002B5AAF /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -450,7 +452,7 @@
 			baseConfigurationReference = 4D13066C459F9B53CC706F54 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AwesomeWebview/Info.plist;
+				INFOPLIST_FILE = "AwesomeWebview/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.lukas.awesomewebview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -462,7 +464,7 @@
 			baseConfigurationReference = 0DCE07377EDE32939718600E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AwesomeWebview/Info.plist;
+				INFOPLIST_FILE = "AwesomeWebview/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.lukas.awesomewebview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,7 +484,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AwesomeWebviewTests/Info.plist;
+				INFOPLIST_FILE = "AwesomeWebviewTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.ciwix.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,7 +501,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AwesomeWebviewTests/Info.plist;
+				INFOPLIST_FILE = "AwesomeWebviewTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.ciwix.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
