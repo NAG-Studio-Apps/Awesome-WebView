@@ -11,6 +11,7 @@ DOWNLOAD_ONLY=false
 W_IOS=true
 W_ANDROID=true
 NAME="Awesome-WebView"
+ORIGINAL_NAME="$NAME"
 APP_ID="moe.lukas.awesomewebview"
 
 function cerr() {
@@ -60,9 +61,14 @@ function download() {
 }
 
 function prepareIos() {
-    filteredName=$(echo $NAME | sed 's/ /_/g')
-    
     cout "Preparing the iOS project..."
+    local oldName="$ORIGINAL_NAME"
+    local newName=$(echo $NAME | sed 's/ /_/g')
+
+    mv $oldName $newName
+    mv "${oldName}.xcodeproj" "${newName}.xcodeproj"
+    mv "${newName}.xcodeproj/xcshareddata/xcschemes/${oldName}.xcscheme" "${newName}.xcodeproj/xcshareddata/xcschemes/${newName}.xcscheme"
+    find . -type f  -print0 | xargs -0 sed -i '' "s/${oldName}/${newName}/g"
 }
 
 function prepareAndroid() {
