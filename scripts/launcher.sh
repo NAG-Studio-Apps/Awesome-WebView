@@ -65,10 +65,12 @@ function prepareIos() {
     local oldName="$ORIGINAL_NAME"
     local newName=$(echo $NAME | sed 's/ /_/g')
 
+    cd ios
     mv $oldName $newName
     mv "${oldName}.xcodeproj" "${newName}.xcodeproj"
     mv "${newName}.xcodeproj/xcshareddata/xcschemes/${oldName}.xcscheme" "${newName}.xcodeproj/xcshareddata/xcschemes/${newName}.xcscheme"
     find . -type f  -print0 | xargs -0 sed -i '' "s/${oldName}/${newName}/g"
+    cd ..
 }
 
 function prepareAndroid() {
