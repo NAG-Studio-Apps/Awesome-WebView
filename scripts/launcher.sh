@@ -144,7 +144,7 @@ done
 if [[ $MEAN_IT == false ]]; then
     cwarn "This script is still unstable!"
     cwarn "Please refer to 'The Ultimate Setup Guide' of your platform."
-    cwarn "If you want to see all the bugs relaunch the script with '--force-launch'"
+    cwarn "If you love bugs, relaunch the script with '--force-launch'"
     exit 100
 fi
 
