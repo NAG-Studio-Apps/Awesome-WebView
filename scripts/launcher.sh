@@ -69,7 +69,7 @@ function download() {
     }
 
     cout "Downloading sources..."
-    wget --quiet --show-progress $URL -O $CACHE
+    wget --quiet --show-progress $url -O $CACHE
 }
 
 function prepareIos() {
@@ -135,7 +135,7 @@ download "$BASEURI/$BRANCH$FORMAT"
 
 if [[ $DOWNLOAD_ONLY == false ]]; then
     cout "Extracting..."
-    tar xfz "$BRANCH$FORMAT"
+    tar xfz $CACHE
 
     cout "Preparing desired platforms..."
     if [[ $W_ANDROID == true ]]; then
