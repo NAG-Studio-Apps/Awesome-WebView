@@ -9,6 +9,7 @@ YELLOW=$(echo -en '\033[00;33m')
 BASEURI="https://github.com/greensn0w/Awesome-WebView/archive"
 BRANCH="master"
 FORMAT=".tar.gz"
+CACHE="repo.tmp${FORMAT}"
 
 DOWNLOAD_ONLY=false
 W_IOS=true
@@ -52,8 +53,7 @@ Note: The values in square brackets are the defaults"
 }
 
 function download() {
-    local URL=$1
-    local fileName="repo.tmp.${FORMAT}"
+    local url=$1
 
     command -v wget 1>/dev/null 2>&1 || {
         cerr "No wget found!"
@@ -65,16 +65,16 @@ function download() {
         }
 
         cout "Downloading sources..."
-        curl -sfL# $URL -o $fileName
+        curl -sfL# $url -o $CACHE
     }
 
     cout "Downloading sources..."
-    wget --quiet --show-progress $URL -O $fileName
+    wget --quiet --show-progress $URL -O $CACHE
 }
 
 function prepareIos() {
     cout "Preparing the iOS project..."
-    local preparedName=$(sed $CUSTOM_NAME 's/ /_/g')
+    local preparedName=$(echo $CUSTOM_NAME | sed 's/ /_/g')
 
     cd ios || die "ERR_PREP_IOS"
     mv $NAME $preparedName
@@ -87,6 +87,11 @@ function prepareIos() {
 function prepareAndroid() {
     true
     cout "Preparing the Android project..."
+}
+
+function die() {
+    cerr "The script crashed because of a $1 exception"
+    exit 128
 }
 
 arguments=($@)
