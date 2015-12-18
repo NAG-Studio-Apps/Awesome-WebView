@@ -1,6 +1,7 @@
 #!/bin/bash
-
 set +x
+
+MEAN_IT=false
 
 RESTORE=$(echo -en '\033[0m')
 RED=$(echo -en '\033[00;31m')
@@ -133,8 +134,19 @@ for argument in "${arguments[@]}"; do
         --debug-mode)
             set -x
         ;;
+
+        --force-launch)
+            MEAN_IT=true
+        ;;
     esac
 done
+
+if [[ ! $MEAN_IT ]]; then
+    cwarn "This script is still unstable!"
+    cwarn "Please refer to 'The Ultimate Setup Guide' of your platform."
+    cwarn "If you want to see all the bugs relaunch the script with '--force-launch'"
+    exit 100
+fi
 
 cout "Downloading..."
 download "$BASEURI/$BRANCH$FORMAT"
