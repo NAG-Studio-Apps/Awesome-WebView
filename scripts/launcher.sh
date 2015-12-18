@@ -141,7 +141,7 @@ for argument in "${arguments[@]}"; do
     esac
 done
 
-if [[ ! $MEAN_IT ]]; then
+if [[ ! $MEAN_IT == true ]]; then
     cwarn "This script is still unstable!"
     cwarn "Please refer to 'The Ultimate Setup Guide' of your platform."
     cwarn "If you want to see all the bugs relaunch the script with '--force-launch'"
