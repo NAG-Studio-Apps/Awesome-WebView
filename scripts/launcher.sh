@@ -1,5 +1,6 @@
 #!/bin/bash
-#set -x
+
+set +x
 
 RESTORE=$(echo -en '\033[0m')
 RED=$(echo -en '\033[00;31m')
@@ -47,6 +48,7 @@ Usage:
 -d | --id            ->  Set the id of your app                          [moe.lukas.awesomewebview]
 --only-ios           ->  Build Awesome-WebView with iOS support only     [false]
 --only-android       ->  Build Awesome-WebView with Android support only [false]
+--debug-mode         ->  Enable debug mode                               [false]
 
 Note: The values in square brackets are the defaults"
     exit 0
@@ -126,6 +128,10 @@ for argument in "${arguments[@]}"; do
 
         --id|-d)
             APP_ID="${arguments[index]}"
+        ;;
+
+        --debug-mode)
+            set -x
         ;;
     esac
 done
