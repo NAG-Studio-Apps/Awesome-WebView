@@ -1,4 +1,6 @@
 #!/bin/bash
+#set -x
+
 RESTORE=$(echo -en '\033[0m')
 RED=$(echo -en '\033[00;31m')
 GREEN=$(echo -en '\033[00;32m')
@@ -7,11 +9,12 @@ YELLOW=$(echo -en '\033[00;33m')
 BASEURI="https://github.com/greensn0w/Awesome-WebView/archive"
 BRANCH="master"
 FORMAT=".tar.gz"
+
 DOWNLOAD_ONLY=false
 W_IOS=true
 W_ANDROID=true
 NAME="Awesome-WebView"
-ORIGINAL_NAME="$NAME"
+CUSTOM_NAME=$NAME
 APP_ID="moe.lukas.awesomewebview"
 
 function cerr() {
@@ -27,7 +30,11 @@ function cwarn() {
 }
 
 function toLowerCase() {
-    echo $1 | tr "[:upper:]" "[:lower:]"
+    echo $1 | tr '[:upper:]' '[:lower:]'
+}
+
+function toUpperCase() {
+    echo $1 | tr '[:lower:]' '[:upper:]'
 }
 
 function printHelp() {
@@ -46,30 +53,34 @@ Note: The values in square brackets are the defaults"
 
 function download() {
     local URL=$1
+    local fileName="repo.tmp.${FORMAT}"
+
     command -v wget 1>/dev/null 2>&1 || {
-        cwarn "No wget found. Trying to fallback to cURL"
+        cerr "No wget found!"
+        cerr "Falling back to cURL..."
         command -v curl 1>/dev/null 2>&1 || {
             cerr "Neither wget nor cURL is installed."
             cerr "Please install one of them and launch the script again."
             exit 1
         }
 
-        curl -fsSL $URL
+        cout "Downloading sources..."
+        curl -sfL# $URL -o $fileName
     }
 
-    wget --quiet --show-progress $URL
+    cout "Downloading sources..."
+    wget --quiet --show-progress $URL -O $fileName
 }
 
 function prepareIos() {
     cout "Preparing the iOS project..."
-    local oldName="$ORIGINAL_NAME"
-    local newName=$(echo $NAME | sed 's/ /_/g')
+    local preparedName=$(sed $CUSTOM_NAME 's/ /_/g')
 
-    cd ios
-    mv $oldName $newName
-    mv "${oldName}.xcodeproj" "${newName}.xcodeproj"
-    mv "${newName}.xcodeproj/xcshareddata/xcschemes/${oldName}.xcscheme" "${newName}.xcodeproj/xcshareddata/xcschemes/${newName}.xcscheme"
-    find . -type f  -print0 | xargs -0 sed -i '' "s/${oldName}/${newName}/g"
+    cd ios || die "ERR_PREP_IOS"
+    mv $NAME $preparedName
+    mv "${NAME}.xcodeproj" "${preparedName}.xcodeproj"
+    mv "${preparedName}.xcodeproj/xcshareddata/xcschemes/${NAME}.xcscheme" "${preparedName}.xcodeproj/xcshareddata/xcschemes/${preparedName}.xcscheme"
+    find . -type f  -print0 | xargs -0 sed -i '' "s/${NAME}/${preparedName}/g"
     cd ..
 }
 
@@ -105,7 +116,7 @@ for argument in "${arguments[@]}"; do
         ;;
 
         --name|-n)
-            NAME="${arguments[index]}"
+            CUSTOM_NAME="${arguments[index]}"
         ;;
 
         --id|-d)
