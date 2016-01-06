@@ -1,5 +1,3 @@
-> #####The new release will probably come 1 or 2/2016. Sorry :(
-
 # Android-Awesome-WebView
 A simple WebView with SplashScreen and Offline handling | 100% native | 100% awesome
 
