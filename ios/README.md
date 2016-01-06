@@ -1,7 +1,5 @@
 [zip]: https://github.com/greensn0w/iOS-Awesome-WebView/archive/master.zip
 
-> #####The new release will probably come 1/2016. Sorry :(
-
 # iOS-Awesome-WebView
 A simple WebView with SplashScreen and Offline handling | 100% native | 100% awesome
 
@@ -62,19 +60,3 @@ Please add your record in a format like this:<br/>
   - Add pull-to-refresh?
   - Easy setup script
   - (your idea ?)
-
-## Support me :)
-If you like my work star this repo and/or tell your friends about it!
-<br/>
-<br/>
-#####If you want to support me you can also buy me a coffee:
-
-Gratipay: [![](https://img.shields.io/gratipay/greensn0w.svg)](https://gratipay.com/greensn0w/)
-
-Flattr: [![](https://button.flattr.com/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=greensn0w&url=https%3A%2F%2Fgithub.com%2Fgreensn0w)
-
-Bitcoin:  1EREBp24Dnjnp62FrM2zE4H9w7cqf8Fo5k
-
-Litecoin: LWhTsJi76eKYsLbzUkJMeLpAZE2By1Gi4E
-
-Dogecoin: DTQax9r18j3zZGV2CNgaxs6Bz8MKXS5DhR
