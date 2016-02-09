@@ -1,8 +1,8 @@
-package me.ciwix.awesome_webview;
+package moe.lukas.AwesomeWebview;
 
-public class Customs {
+public class Settings {
 
-    //How long the splash will display (seconds)
+    //How long the splash will display in seconds
     public static final int SPLASH_DISPLAY_LENGTH = 3;
 
     //The url to display

@@ -1,4 +1,4 @@
-package me.ciwix.awesome_webview;
+package moe.lukas.AwesomeWebview;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,6 +16,6 @@ public class Splash extends Activity {
             public void run(){
                 new Spawner().spawnView(Splash.this, WebContent.class);
             }
-        }, Customs.SPLASH_DISPLAY_LENGTH * 1000);
+        }, Settings.SPLASH_DISPLAY_LENGTH * 1000);
     }
 }

@@ -1,4 +1,4 @@
-package me.ciwix.awesome_webview;
+package moe.lukas.AwesomeWebview;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -6,16 +6,29 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+/**
+ * A helper class to spawn other classes
+ */
 public class Spawner {
 
-    public void spawnView(Context _old, Class _new){
+    /**
+     * Spawns $_new using the context $_old
+     * @param _old
+     * @param _new
+     */
+    public void spawnView(Context _old, Class _new) {
         Intent mainIntent = new Intent(_old, _new);
         mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         _old.startActivity(mainIntent);
         ((Activity) _old).finish();
     }
 
-    public void spawnExitDialog(Context context){
+    /**
+     * Spawns the exit dialog using $context
+     *
+     * @param context
+     */
+    public void spawnExitDialog(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
         builder.setTitle(Localization.EXIT_DIALOG_HEADLINE);

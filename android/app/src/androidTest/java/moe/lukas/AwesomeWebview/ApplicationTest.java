@@ -1,4 +1,4 @@
-package me.ciwix.awesome_webview;
+package moe.lukas.AwesomeWebview;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
