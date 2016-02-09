@@ -1,6 +1,5 @@
 #import <Foundation/NSURLError.h>
 #import <MBProgressHUD.h>
-#import <powerdefines/powerdefines.h>
 
 #import "Globals.h"
 #import "ViewController.h"

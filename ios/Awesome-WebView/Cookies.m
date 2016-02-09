@@ -1,11 +1,3 @@
-//
-//  Cookies.m
-//  AwesomeWebview
-//
-//  Created by Lukas on 12/06/15.
-//  Copyright (c) 2015 ciwix. All rights reserved.
-//
-
 #import "Cookies.h"
 
 @implementation Cookies
@@ -17,13 +9,13 @@
     
     //Create the cookie dough
     NSMutableDictionary *dough = [NSMutableDictionary dictionary];
-    [dough setObject:name forKey:NSHTTPCookieName];
-    [dough setObject:value forKey:NSHTTPCookieValue];
-    [dough setObject:domain forKey:NSHTTPCookieDomain];
-    [dough setObject:origin forKey:NSHTTPCookieOriginURL];
-    [dough setObject:path forKey:NSHTTPCookiePath];
-    [dough setObject:version forKey:NSHTTPCookieVersion];
-    [dough setObject:[[NSDate date] dateByAddingTimeInterval:(NSTimeInterval) validFromNow] forKey:NSHTTPCookieExpires];
+    dough[NSHTTPCookieName] = name;
+    dough[NSHTTPCookieValue] = value;
+    dough[NSHTTPCookieDomain] = domain;
+    dough[NSHTTPCookieOriginURL] = origin;
+    dough[NSHTTPCookiePath] = path;
+    dough[NSHTTPCookieVersion] = version;
+    dough[NSHTTPCookieExpires] = [[NSDate date] dateByAddingTimeInterval:(NSTimeInterval) validFromNow];
     
     //Bake the cookie
     NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:dough];

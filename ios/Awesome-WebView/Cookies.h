@@ -1,11 +1,3 @@
-//
-//  Cookies.h
-//  AwesomeWebview
-//
-//  Created by Lukas on 12/06/15.
-//  Copyright (c) 2015 ciwix. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 @interface Cookies : NSObject
