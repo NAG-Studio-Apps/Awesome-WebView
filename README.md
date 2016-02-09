@@ -11,7 +11,7 @@ You have 2 options to use the awesome WebViews:
 
 2. The experimental launcher<br/>
   Run it like this:
-  - `curl -fsSL http://git.io/awsmld | bash -s -- [options]`
+  - `curl -fsSL http://bit.ly/awsmwv | bash -s -- [options]`
   
   To get a list of possible options run:
-  - `curl -fsSL http://git.io/awsmld | bash -s -- --force-launch --help`
+  - `curl -fsSL http://bit.ly/awsmwv | bash -s -- --force-launch --help`
