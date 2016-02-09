@@ -8,7 +8,7 @@ RED=$(echo -en '\033[00;31m')
 GREEN=$(echo -en '\033[00;32m')
 YELLOW=$(echo -en '\033[00;33m')
 
-BASEURI="https://github.com/greensn0w/Awesome-WebView/archive"
+BASEURI="https://github.com/sn0w/Awesome-WebView/archive"
 BRANCH="master"
 FORMAT=".tar.gz"
 CACHE="repo.tmp${FORMAT}"
@@ -19,6 +19,14 @@ W_ANDROID=true
 NAME="Awesome-WebView"
 CUSTOM_NAME=$NAME
 APP_ID="moe.lukas.awesomewebview"
+
+function motd(){
+    echo "   _                             __      __   _        _                  "
+    echo "  /_\__ __ _____ ___ ___ _ __  __\ \    / /__| |____ _(_)_____ __ __      "
+    echo " / _ \ V  V / -_|_-</ _ \ '  \\/ -_) \\/\\/ / -_) '_ \ V / / -_) V  V /   "
+    echo "/_/ \_\_/\_/\___/__/\___/_|_|_\___|\_/\_/\___|_.__/\_/|_\___|\_/\_/       "
+    echo ""                                                             
+}
 
 function cerr() {
     echo "${RED}==> $1 ${RESTORE}"
@@ -97,6 +105,7 @@ function die() {
     exit 128
 }
 
+motd
 arguments=($@)
 index=0
 for argument in "${arguments[@]}"; do
