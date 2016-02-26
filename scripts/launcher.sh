@@ -41,11 +41,11 @@ function cwarn() {
 }
 
 function toLowerCase() {
-    echo $1 | tr '[:upper:]' '[:lower:]'
+    echo "$1" | tr '[:upper:]' '[:lower:]'
 }
 
 function toUpperCase() {
-    echo $1 | tr '[:lower:]' '[:upper:]'
+    echo "$1" | tr '[:lower:]' '[:upper:]'
 }
 
 function printHelp() {
@@ -76,28 +76,35 @@ function download() {
         }
 
         cout "Downloading sources..."
-        curl -sfL# $url -o $CACHE
+        curl -sfL# "$url" -o $CACHE
     }
 
     cout "Downloading sources..."
-    wget --quiet --show-progress $url -O $CACHE
+    wget --quiet --show-progress "$url" -O $CACHE
+}
+
+function renameHandler() {
+    newName=$(echo $0 | sed "s,$1,$2,g")
+    ${__AWSM_RENAME_LIST}[$0]=${newName}
 }
 
 function prepareIos() {
     cout "Preparing the iOS project..."
-    local preparedName=$(echo $CUSTOM_NAME | sed 's/ /_/g')
+    local preparedName=$(echo ${CUSTOM_NAME} | sed "s/ /_/g")
 
-    cd ios || die "ERR_PREP_IOS"
-    mv $NAME $preparedName
-    mv "${NAME}.xcodeproj" "${preparedName}.xcodeproj"
-    mv "${preparedName}.xcodeproj/xcshareddata/xcschemes/${NAME}.xcscheme" "${preparedName}.xcodeproj/xcshareddata/xcschemes/${preparedName}.xcscheme"
-    find . -type f  -print0 | xargs -0 sed -i '' "s/${NAME}/${preparedName}/g"
+    cd ios || die "ERR_IOS_NOT_FOUND"
+    export -f renameHandler
+
+    __AWSM_RENAME_LIST=()
+    export __AWSM_RENAME_LIST
+
+    find . -iname "*$NAME*" -exec bash -c 'renameHandler "$@"' '{}' ${NAME} ${preparedName} \;
     cd ..
 }
 
 function prepareAndroid() {
-    true
     cout "Preparing the Android project..."
+    true
 }
 
 function die() {
@@ -109,7 +116,7 @@ motd
 arguments=($@)
 index=0
 for argument in "${arguments[@]}"; do
-    index=`expr $index + 1`
+    index=$((index + 1))
 
     case $argument in
         --help|-h)
