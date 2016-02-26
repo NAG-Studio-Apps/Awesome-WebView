@@ -1,16 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 23
     buildToolsVersion "21.1.2"
 
+    useLibrary 'org.apache.http.legacy'
+
     defaultConfig {
-        applicationId "me.ciwix.awesome_webview"
-        minSdkVersion 10
-        targetSdkVersion 21
+        applicationId "moe.lukas.awesomewebview"
+        minSdkVersion 11
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,5 +24,5 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:appcompat-v7:23.2.0'
 }

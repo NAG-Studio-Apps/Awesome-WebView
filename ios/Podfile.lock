@@ -1,13 +1,18 @@
 PODS:
   - MBProgressHUD (0.9.1)
   - powerdefines (0.0.6)
+  - YYHRequest (0.0.3):
+    - YYHRequest/JSON (= 0.0.3)
+  - YYHRequest/JSON (0.0.3)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 0.9.1)
   - powerdefines
+  - YYHRequest
 
 SPEC CHECKSUMS:
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   powerdefines: cd8344ea34c13c5af42e1eec0cda8316338dd70d
+  YYHRequest: 0a01f6705598697e048ef002d4d22cffdedd987b
 
 COCOAPODS: 0.39.0

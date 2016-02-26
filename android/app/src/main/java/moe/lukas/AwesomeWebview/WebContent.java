@@ -3,6 +3,7 @@ package moe.lukas.AwesomeWebview;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.CookieSyncManager;
@@ -30,6 +31,11 @@ public class WebContent extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Log.i("MAIN", "LAUNCHING SERVICE");
+        Intent pushService = new Intent(this, PushService.class);
+        startService(pushService);
+
         setContentView(R.layout.activity_main);
 
         webview = (WebView) findViewById(R.id.webView);

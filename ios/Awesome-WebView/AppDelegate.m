@@ -1,4 +1,6 @@
 #import "AppDelegate.h"
+#import "Settings.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -8,7 +10,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // Register notification settings
+    if (ENABLE_PUSH_NOTIFICATIONS) {
+        NSLog(@"~AppDelegate::didFinishLaunchingWithOptions");
+        [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:BACKGROUND_FETCH_INTERVAL];
+        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+    }
+
     return YES;
+}
+
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"~AppDelegate::performFetchWithCompletionHandler");
+    ViewController *viewController = (ViewController *) self.window.rootViewController;
+    
+    [viewController fetchNewDataWithCompletionHandler:^(UIBackgroundFetchResult result) {
+        completionHandler(result);
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

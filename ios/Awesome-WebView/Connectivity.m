@@ -1,4 +1,4 @@
-#import "Globals.h"
+#import "Settings.h"
 #import "Connectivity.h"
 
 #import <sys/socket.h>

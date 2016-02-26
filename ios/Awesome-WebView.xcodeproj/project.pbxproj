@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E9E7EE6551AD5149F65237 /* StorageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9ED2B70C6352A910FCE47 /* StorageHelper.m */; };
 		520B6D3A87001F58B8E5A64D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77265FABA31D52A4AEA86146 /* libPods.a */; };
 		D00151FA1B282734002B5AAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00151F91B282734002B5AAF /* main.m */; };
 		D00151FD1B282734002B5AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D00151FC1B282734002B5AAF /* AppDelegate.m */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		052A57329B899DC058E10D13 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		35E9EB56EA50773D67AC9064 /* StorageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageHelper.h; sourceTree = "<group>"; };
+		35E9ED2B70C6352A910FCE47 /* StorageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageHelper.m; sourceTree = "<group>"; };
 		77265FABA31D52A4AEA86146 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00151F81B282734002B5AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00151F91B282734002B5AAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,13 +48,13 @@
 		D00152071B282734002B5AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D00152121B282734002B5AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00152131B282734002B5AAF /* AwesomeWebviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeWebviewTests.m; sourceTree = "<group>"; };
-		D027670A1C1B263A00BFCE8A /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		D024C48F1C808F76003C7655 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Awesome-WebView.temp_caseinsensitive_rename.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D027670A1C1B263A00BFCE8A /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		D028E83E1B2863170056DE94 /* Media */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Media; sourceTree = "<group>"; };
 		D05163631B28312800A39579 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D051636B1B28353900A39579 /* Connectivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connectivity.h; sourceTree = "<group>"; };
 		D051636C1B28353900A39579 /* Connectivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connectivity.m; sourceTree = "<group>"; };
 		D068CCA91C1CB79F003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome-WebView.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D068CCAA1C1CB7A5003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Awesome-WebView.temp_caseinsensitive_rename.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08FC77D1B2AC98D0076F423 /* Cookies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cookies.h; sourceTree = "<group>"; };
 		D08FC77E1B2AC98D0076F423 /* Cookies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cookies.m; sourceTree = "<group>"; };
 		DCE502EB86CF83A50F047790 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,9 +104,9 @@
 				D00152101B282734002B5AAF /* Awesome-WebViewTests */,
 				D05163631B28312800A39579 /* SystemConfiguration.framework */,
 				D068CCA91C1CB79F003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.app */,
-				D068CCAA1C1CB7A5003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */,
 				3277D4CEF0B1351081EAE58F /* Pods */,
 				BA64CC1E09A14198F3AAA384 /* Frameworks */,
+				D024C48F1C808F76003C7655 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,13 +120,15 @@
 				D051636C1B28353900A39579 /* Connectivity.m */,
 				D08FC77D1B2AC98D0076F423 /* Cookies.h */,
 				D08FC77E1B2AC98D0076F423 /* Cookies.m */,
-				D027670A1C1B263A00BFCE8A /* Globals.h */,
+				D027670A1C1B263A00BFCE8A /* Settings.h */,
 				D00152041B282734002B5AAF /* Images.xcassets */,
 				D00152061B282734002B5AAF /* LaunchScreen.xib */,
 				D00152011B282734002B5AAF /* Main.storyboard */,
 				D028E83E1B2863170056DE94 /* Media */,
 				D00151FE1B282734002B5AAF /* ViewController.h */,
 				D00151FF1B282734002B5AAF /* ViewController.m */,
+				35E9ED2B70C6352A910FCE47 /* StorageHelper.m */,
+				35E9EB56EA50773D67AC9064 /* StorageHelper.h */,
 			);
 			path = "Awesome-WebView";
 			sourceTree = "<group>";
@@ -192,7 +197,7 @@
 			);
 			name = "Awesome-WebViewTests";
 			productName = AwesomeWebviewTests;
-			productReference = D068CCAA1C1CB7A5003505E9 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */;
+			productReference = D024C48F1C808F76003C7655 /* Awesome-WebView.temp_caseinsensitive_rename.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -202,10 +207,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = ciwix;
+				ORGANIZATIONNAME = lukas;
 				TargetAttributes = {
 					D00151F31B282734002B5AAF = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 5V438M6YM8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D001520C1B282734002B5AAF = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -311,6 +322,7 @@
 				D08FC77F1B2AC98D0076F423 /* Cookies.m in Sources */,
 				D00151FD1B282734002B5AAF /* AppDelegate.m in Sources */,
 				D00151FA1B282734002B5AAF /* main.m in Sources */,
+				35E9E7EE6551AD5149F65237 /* StorageHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +454,9 @@
 			baseConfigurationReference = DCE502EB86CF83A50F047790 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Awesome-WebView/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.lukas.awesomewebview;
 				PRODUCT_NAME = "Awesome-WebView.temp_caseinsensitive_rename";
@@ -454,7 +468,9 @@
 			baseConfigurationReference = 052A57329B899DC058E10D13 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Awesome-WebView/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.lukas.awesomewebview;
 				PRODUCT_NAME = "Awesome-WebView.temp_caseinsensitive_rename";

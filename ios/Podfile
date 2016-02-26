@@ -9,4 +9,5 @@ target 'Awesome-WebViewTests' do
 end
 
 pod 'powerdefines'
+pod 'YYHRequest'
 pod 'MBProgressHUD', '~> 0.9.1'
