@@ -20,12 +20,23 @@
 
     NSLog(@"[View] ~viewDidLoad");
 
+    if (PD_SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        UIView *sbview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
+        sbview.backgroundColor = PD_COLOR_HEX(STATUSBAR_COLOR);
+        [self.view addSubview:sbview];
+    }
+
     //Load global uri in webview
     [self loadRequestedFromString:VIEW_URI];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)loadRequestedFromString:(NSString *)urlString {

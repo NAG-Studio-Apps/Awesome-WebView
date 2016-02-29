@@ -11,6 +11,9 @@
 #ifndef Globals_h
     #define Globals_h
 
+    // The statusbar color
+    #define STATUSBAR_COLOR 0xFFFFFF
+
     // The URI our WebView will show
     #define VIEW_URI @"http://google.com"
 
