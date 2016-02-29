@@ -134,19 +134,12 @@
     [request onSuccess:^(NSData *data) {
         NSLog(@"Successfully fetched notifications!");
 
-        NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", strData);
-
-        NSError *err = nil;
-        NSMutableDictionary *rawNotifications = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
-        NSDictionary *notifications = rawNotifications[@"notifications"];
-
+        NSMutableDictionary *notifications = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil][@"notifications"];
+        StorageHelper *storageHelper = [[[StorageHelper alloc] init] load];
         int badgeNo = (int) [UIApplication sharedApplication].applicationIconBadgeNumber;
 
-        StorageHelper *storageHelper = [[StorageHelper alloc] init];
-
         for (NSDictionary *push in notifications) {
-            if ([[storageHelper ignoredNotifications] valueForKey:push[@"uid"]] == nil) {
+            if (![storageHelper->storage containsObject:push[@"uid"]]) {
                 NSLog(@"Showing notification %@", push[@"uid"]);
 
                 UILocalNotification *localNotification = [[UILocalNotification alloc] init];
@@ -156,6 +149,7 @@
                 localNotification.fireDate = dateToFire;
                 localNotification.alertTitle = push[@"title"];
                 localNotification.alertBody = push[@"message"];
+                localNotification.soundName = UILocalNotificationDefaultSoundName;
                 localNotification.applicationIconBadgeNumber = ++badgeNo;
                 localNotification.userInfo = @{@"DUMMY" : @"STUB!"};
 
@@ -163,7 +157,8 @@
                 [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 
                 // Save UID
-                [storageHelper addValue:push[@"uid"] autoSave:YES];
+                [storageHelper->storage addObject:push[@"uid"]];
+                [storageHelper save];
             } else {
                 NSLog(@"Ignoring notification %@", push[@"uid"]);
             }

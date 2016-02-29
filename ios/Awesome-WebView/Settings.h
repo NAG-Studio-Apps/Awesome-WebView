@@ -37,8 +37,22 @@
     #define ENABLE_PUSH_NOTIFICATIONS NO
 
     // The url to get the notifications from
-    #define PUSH_API_URL @"http://push.loc.192.168.130.126.xip.io/wp-json/gg_push/v1/notifications"
+    // Expects this format:
+    /**
+     * {
+     *     "notifications": [
+     *         {
+     *             "uid": 28   // The UID is stored locally so that every notification is only shown one time
+     *             "title": "Cool Title!",
+     *             "message": "Click here to see more!"
+     *         },
+     *         ...
+     *     ]
+     * }
+     */
+    #define PUSH_API_URL @"http://api.yoursite.com/v1/get-notifications"
 
-    // How often to fetch notification (seconds)
-    #define BACKGROUND_FETCH_INTERVAL 15
+    // How often to fetch notifications (seconds)
+    // Note that this is only a suggestion to ios and the interval could actually be longer or shorter
+    #define BACKGROUND_FETCH_INTERVAL 240
 #endif

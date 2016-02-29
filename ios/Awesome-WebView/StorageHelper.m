@@ -2,55 +2,19 @@
 
 @implementation StorageHelper
 
-#pragma mark - NSCoding
-
-static NSString *const NotificationKey = @"ignoredNotifications";
-
-+ (id)alloc {
-    return [super alloc];
+- (NSString *)getPath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    return [paths[0] stringByAppendingPathComponent:@"storageHelper.plist"];
 }
 
-- (id)init {
-    self = [super init];
-    if (self == nil) {
-        return nil;
-    }
-
-    // Init property
-    self.ignoredNotifications = [[NSArray alloc] init];
-
-    // Load data
-    [self load];
+- (instancetype)load {
+    self->storage = [[NSMutableArray alloc] initWithArray:[NSArray arrayWithContentsOfFile:[self getPath]]];
     return self;
 }
 
-- (void)save {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[self ignoredNotifications] forKey:NotificationKey];
-    [defaults synchronize];
-}
-
-- (void)load {
-    NSArray *data = [[NSUserDefaults standardUserDefaults] objectForKey:NotificationKey];
-
-    if (data != nil) {
-        self.ignoredNotifications = data;
-    }
-}
-
-- (void)reset {
-    self.ignoredNotifications = [[NSMutableArray alloc] init];
-    [self save];
-}
-
-- (void)addValue:(id)value autoSave:(BOOL)save {
-    NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:[self ignoredNotifications]];
-    [tmp addObject:value];
-    self.ignoredNotifications = [[NSArray alloc] initWithArray:tmp];
-
-    if (save) {
-        [self save];
-    }
+- (instancetype)save {
+    [[[NSArray alloc] initWithArray:self->storage] writeToFile:[self getPath] atomically:YES];
+    return self;
 }
 
 @end
