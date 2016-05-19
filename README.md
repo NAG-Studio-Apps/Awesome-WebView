@@ -15,3 +15,5 @@ You have 2 options to use the awesome WebViews:
   
   To get a list of possible options run:
   - `curl -fsSL http://bit.ly/awsmwv | bash -s -- --force-launch --help`
+
+<br><br>[![](https://lukas.moe/images/support_me.gif)](https://lukas.moe/support)
