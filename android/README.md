@@ -25,8 +25,8 @@ so i decided to start the AwesomeWebView project.<br/>
     Just accept this and install the Android Dependencies
 
 ### Step2: Setup AwesomeWebView
-  - Go into `Customs.java` and modify the values
-  - Optionally `Localization.java` for futher customization
+  - Go into `Settings.java` and modify the values
+  - Optionally edit `Localization.java` for further localization
 
 ### Step3: Customize the Splashscreen
   - Open `res/layout/activity_splash.xml`
