@@ -25,7 +25,7 @@ so i decided to start the AwesomeWebView project.<br/>
 
 ### Step2: Setup AwesomeWebView
   - Choose the `Project Navigator` in XCode by clicking this icon in the left pane -> ![](https://i.imgur.com/e0eNTzQ.png)
-  - Open the `Settings.m` file. <br/>
+  - Open the `Settings.h` file. <br/>
   - Modify the `#define` statements to customize your app.
     
 ### Step3: Customize the Splashscreen
