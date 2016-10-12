@@ -14,7 +14,7 @@ These frameworks are nice but very bloated with API's and plugins.<br/>
 I just wanted to show a responsive website and a custom error page,<br/>
 so i decided to start the AwesomeWebView project.<br/>
 <br/>
-If you think this is useful, please star it so we can reach more people :)<br/>
+
 ## The ultimate setup guide
 
 ### Step1: Basic setup
