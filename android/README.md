@@ -3,20 +3,20 @@ A simple WebView with SplashScreen and Offline handling | 100% native | 100% awe
 
 ## Features:
   - Native: 100% Java
-  - Light: NO dependencies
+  - Light: No dependencies
   - **Easy: You don't need to understand Java to get this running**
   - Customizable
 
 ## Why this and not Cordova/Ionic/Phonegap/.... ?
 These frameworks are nice but very bloated with API's and plugins.<br/>
-I just wanted to show a responsive website and show a custom error page,<br/>
+I just wanted to show a responsive website and custom error page,<br/>
 so i decided to start the AwesomeWebView project.<br/>
 <br/>
 
 ##The ultimate setup guide
 
 ### Step1: Basic setup
-  - Clone or [download](https://github.com/greensn0w/Android-Awesome-WebView/archive/master.zip) this repository
+  - Clone this repository
   - Open Android Studio
   - Click `Import Project` and select the AwesomeWebView folder
   
@@ -25,20 +25,20 @@ so i decided to start the AwesomeWebView project.<br/>
     Just accept this and install the Android Dependencies
 
 ### Step2: Setup AwesomeWebView
-  - Go into `Customs.java` and modify the values to your liking
-  - Now open `Localization.java` and replace the values if you want to
-  - WOO thats it!
+  - Go into `Customs.java` and modify the values
+  - Optionally `Localization.java` for futher customization
 
 ### Step3: Customize the Splashscreen
-  - Ok you're not done yet :smile:
   - Open `res/layout/activity_splash.xml`
 ![](http://i.imgur.com/BQyGtSR.png)
   - Replace the texts by double-clicking them <br/>
     The grey bar at the top is hidden at runtime
+    
+  - Alternatively remove the texts and add an image
 
 ### Step4: Customize the Offline handler
-  - One of AwesomeWebView's coolest features is it's Out-Of-Box offline handling.<br/>
-    If you want to you may completely change it to your liking
+  - One of AwesomeWebView's coolest features is it's ootb offline handling.<br/>
+    If you want to, you may completely customize it.
   - Open `res/layout/activity_offline.xml`
 ![](http://i.imgur.com/wgaXJxQ.png)
   - All labels are editable by double-klicking as usual
@@ -55,8 +55,6 @@ This is usually a reverse domain name like `com.yourcompany.coolApp`
 ### DONE!
 Now you have your own native webview app.<br/>
 If you built something awesome, you can immortalize yourself by editing the `Usages`-Page in the Wiki.<br/>
-Please add your record in a format like this:<br/>
-`{{APP_NAME}} by {{USERNAME/COMPANY}}`
 <br/>
 
 ### Roadmap:
