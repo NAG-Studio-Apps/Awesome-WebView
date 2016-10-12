@@ -1,19 +1,5 @@
 # Awesome-WebView
 
-> The README.md will be extended right after the relaunch ;)
-> <br/>
-> Stay tuned!
-
-You have 2 options to use the awesome WebViews:
-
-1. The Ultimate Setup Guides
-  - Please look into the folder of you platform (`/ios` | `/android`)
-
-2. The experimental launcher<br/>
-  Run it like this:
-  - `curl -fsSL http://bit.ly/awsmwv | bash -s -- [options]`
-  
-  To get a list of possible options run:
-  - `curl -fsSL http://bit.ly/awsmwv | bash -s -- --force-launch --help`
+### Click on the [android/](https://github.com/sn0w/Awesome-WebView/tree/develop/android) or [ios/](https://github.com/sn0w/Awesome-WebView/tree/develop/ios) folder to get a detailed Guide for your platform.
 
 <br><br>[![](https://lukas.moe/images/support_me.gif)](https://lukas.moe/support)
