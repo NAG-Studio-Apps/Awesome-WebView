@@ -5,7 +5,7 @@ A simple WebView with SplashScreen and Offline handling | 100% native | 100% awe
 
 ## Features:
   - Native: 100% Objective-C
-  - Light: Only 1 dependency
+  - Light: Only 2 dependencies
   - **Easy: You don't need to understand Objective-C to get this running**
   - Customizable
 
